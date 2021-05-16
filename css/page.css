@@ -1,0 +1,366 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #7e7f84;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки   !!! font-family: 'Roboto Condensed', sans-serif; !!!*/
+    min-height:100%;
+    font-family: 'Roboto', sans-serif;
+}
+a, a:visited { /*порядок правил для ссылок имеет значение  */
+	color: black;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+	text-decoration:underline;
+}
+a:focus, a:active {
+	color: #f45a40;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+.center-block-main{
+    max-width: 1170px;
+    margin: 0 auto;
+} 
+
+.header-top{
+    padding: 30px 0 ;
+    border-bottom: 1px solid #eee;
+}  
+    .logo{
+        float: left;
+        font-size: 2.675em;
+        font-family:'Roboto Condensed', sans-serif;
+        font-weight: bold;
+        color: red;
+    }
+    .contakt-basket{
+        float: right;
+
+    }
+    .contakt-basket p{
+        float: left;
+        font-size: 0,75em;
+        font-weight: 600;
+    }
+        .contakt-basket p img{
+            vertical-align: middle;
+        }
+    .header-phone{
+        padding-top: 6px;
+    }
+    .header-basket{
+        border: 1px solid #eee;
+        padding: 7px 25px;
+        margin-left: 20px;
+    }
+        .header-basket a{
+            text-transform: uppercase;
+            color: #7e7f84;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .header-basket a :hover{
+            color: #f45a40;
+        }
+.header-bottom{
+    padding: 10px 0;
+    margin-bottom: 20px;
+
+}   
+    .menu{
+        float: left;
+
+    }
+        .menu li{
+            float: left;
+            text-transform: uppercase;
+            margin-right: 30px;
+            font-size: 0,875em;
+            }
+            .menu li a{
+                color: #030303;
+                text-decoration: none;
+            }
+                .menu li a:hover{
+                    color: #f45a40;
+                }
+    .search-block{
+        float: left;
+        margin-top: -5px;
+    }
+        .search-btn{
+            float: left;
+            margin: 5px 5px 0 0;
+
+        }
+        .search{
+            float: left;
+            font-size: 0.875em;
+            color: #7c7d83;
+            border: none;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+.container{
+    display: block;
+    max-width: 1170px;
+    margin: 0 auto;
+    height: 720px;
+}
+.photo img{
+    border: 2px solid black;
+    float: left;
+    width: 60%;
+    margin-right: 15px;
+}
+.about-product{
+    width: 37%;
+    float: right;
+    align-content: flex-start;
+}
+.about-product h2{
+    font-size: 35px;
+    font-family: "AdihausDIN Cn",Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: black;
+}
+.about-product p{
+    font-size: 25px;
+    font-family: "AdihausDIN Cn",Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: black;
+}
+.siz{
+    font-size: 15px;
+    font-family: "AdihausDIN Cn",Helvetica, Arial, sans-serif;
+}
+.size{
+    text-transform: uppercase;
+        font-size: 0.875em;
+        border: none;
+        background: #f45a40;
+        padding: 7px 20px;
+        color: #fff;
+        cursor: pointer;
+}
+.buy{
+    margin-top: 10px;
+    text-transform: uppercase;
+        font-size: 1.275em;
+        border: solid 1px black;
+        background: black;
+        padding: 7px 20px;
+        color: #fff;
+        cursor: pointer;
+}
+.block-text{
+    margin-left: 174px;
+    width: 80%;
+    height: 60px;
+    border-bottom: 1px solid rgb(160, 159, 159);
+    border-top: 1px solid rgb(160, 159, 159);
+    margin-bottom: 50px;
+}
+.block-text li{
+    display: inline;
+    text-transform: uppercase;
+    margin-right: 40px;
+    font-weight: bold;
+    
+}
+.block-text ul{
+    margin-top: 20px;
+}
+.opisanie{
+    display: block;
+    width: 65%;
+    margin-left: 174px;
+    height: 600px;
+}
+.opisanie img{
+    float: right;
+    margin-left: 30px;
+    width: 550px;
+    height: 500px;
+}
+.content-opisanie h2{
+    font-family: "AdineuePRO",Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+.content-opisanie h3{
+    font-family: "AdineuePRO",Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+.charms{
+    display: block;
+    width: 65%;
+    margin-left: 174px; 
+}
+.charms h1{
+    font-family: "AdineuePRO",Helvetica, Arial, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+.charms li{
+    margin: 15px;
+    color: black;
+}
+.ftr{
+    background: #2a2d34;
+    padding:40px 0;
+}
+    .ftr h2{
+        color: #fff;
+        font-size: 1.325em;
+        font-family: 'Roboto Condensed', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .ftr p{
+        font-size: 0.875em;
+        margin-bottom: 20px;
+    }
+    .ftr h3{
+        font-size: 0.875em;
+        margin-bottom: 5px;
+    }
+        .ftr h3 a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .ftr h3 a:hover{
+            text-decoration: underline;
+        }
+    .support{
+        float: left;
+        width: 47%;
+        margin-right: 3%;
+    }
+        .support a{
+            display: block;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #7e7f84;
+        }
+        .support a:hover{
+            text-decoration: underline;
+        }
+    .ftrmail{
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        margin-bottom: 15px;
+        padding: 7px 20px;
+        box-sizing: border-box;
+        border: none;
+    }
+    .ftrtext{
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 0.75em;
+        margin-bottom: 15px;
+        padding: 7px 20px;
+        box-sizing: border-box;
+        border: none;
+    }
+    .ftrsubmit{
+        text-transform: uppercase;
+        font-size: 0.875em;
+        border: none;
+        background: #f45a40;
+        padding: 7px 20px;
+        color: #fff;
+        cursor: pointer;
+    }
